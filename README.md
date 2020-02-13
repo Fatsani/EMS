@@ -7,3 +7,5 @@ An application for examination administration
 #Web
 
 #API
+
+#Licence
