@@ -14,9 +14,9 @@ class CreateExamRoomTable extends Migration
     public function up()
     {
         Schema::create('exam_room', function (Blueprint $table) {
-            $table->increment('idExamRoom')->primary();
-            $table->string('exam',10);
-            $table->string('room',20);
+            $table->increments('idExamRoom');
+            $table->integer('exam',false, true)->length(10);;
+            $table->integer('room',false, true)->length(20);;
             $table->timestamps();
             $table->foreign('exam')->references('idexam')->on('exam')->onDelete('restrict');
             $table->foreign('room')->references('idroom')->on('rooms')->onDelete('restrict');

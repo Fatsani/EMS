@@ -14,12 +14,12 @@ class CreateExamInvigilatorsTable extends Migration
     public function up()
     {
         Schema::create('exam_invigilators', function (Blueprint $table) {
-            $table->increment('idexamInvigilator')->primary();
-            $table->string('invigilator',20);
+            $table->increments('idexamInvigilator');
+            $table->integer('invigilator',false, true)->length(20);;
             $table->enum('role',[0,1]);
-            $table->string('exam');
+            $table->integer('exam',false, true)->length(10);
             $table->timestamps();
-            $table->foreign('invigilator')->references('idlecture')->on('lectures')->onDelete('restrict');
+            $table->foreign('invigilator')->references('idlecture')->on('lecturers')->onDelete('restrict');
             $table->foreign('exam')->references('idexam')->on('exam')->onDelete('restrict');
         });
     }

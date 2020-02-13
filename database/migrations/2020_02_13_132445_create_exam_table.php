@@ -14,7 +14,7 @@ class CreateExamTable extends Migration
     public function up()
     {
         Schema::create('exam', function (Blueprint $table) {
-            $table->increment('idexam')->primary();
+            $table->increments('idexam');
             $table->string('name',45);
             $table->string('course',10);
             $table->date('date');

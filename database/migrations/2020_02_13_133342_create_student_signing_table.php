@@ -14,9 +14,9 @@ class CreateStudentSigningTable extends Migration
     public function up()
     {
         Schema::create('student_signing', function (Blueprint $table) {
-            $table->increment('idsign')->primary();
+            $table->increments('idsign');
             $table->string('student',20);
-            $table->string('exam');
+            $table->integer('exam',false, true)->length(10);;
             $table->enum('firstSignature',[0,1]);
             $table->enum('secondSignature',[0,1]);
             $table->timestamps();
