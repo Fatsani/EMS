@@ -2,10 +2,6 @@
 An application for examination administration
 
 # Setup
+ git clone 
+ php artisan migrate 
 
-
-# Web
-
-# API
-
-# Licence
