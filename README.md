@@ -2,18 +2,10 @@
 An application for examination administration
 
 # Setup
-<<<<<<< HEAD
- git clone 
- php artisan migrate 
+## Setup commands
+ - git clone https://github.com/Fatsani/EMS.git
+ - cd EMS
+ - composer update
+ - php artisan migrate 
+ - php -S localhost:8000 -t public
 
-=======
-
-
-# Web
-
-
-# API
-
-
-# Licence
->>>>>>> cb89732d0fe42201dc4c3bcc1d2b0bb72d0192fc
