@@ -1,4 +1,4 @@
-# EMS
+# EMS API
 An application for examination administration
 
 #Setup
